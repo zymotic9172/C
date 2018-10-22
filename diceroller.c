@@ -8,6 +8,7 @@ void printRandoms(int lower, int upper, int count)
     for (i = 0; i < count; i++) 
     { 
         int num = (rand() %(upper - lower + 1)) + lower; 
+        printf("%d", num);
     }
 } 
 
