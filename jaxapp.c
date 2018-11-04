@@ -1,3 +1,4 @@
+/*friends questionaire program that i rewrote differently*/
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
