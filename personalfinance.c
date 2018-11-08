@@ -1,3 +1,5 @@
+/*Personal finance program
+Project Started: November 7, 2018*/
 #include <stdio.h>
 
 int running = 1;
