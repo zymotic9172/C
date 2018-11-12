@@ -1,13 +1,15 @@
 /*Personal finance program
 Project Started: November 7, 2018*/
 #include <stdio.h>
+#include <stdlib.h>
+#include <sqlite3.h>
 
 int running = 1;
 char command;
+int deposit();
 
 int main()
 {
-    char amount[5];
     while(running == 1)
     {
         printf("Welcome to the personal finance app. Please choose which number option you would like.\n1. Deposit\n2. Withdraw\n3. Coin Jar\n4. Current Balance\n5. Quit\n");
@@ -17,10 +19,6 @@ int main()
             case '1':
                 /*deposit*/
                 deposit();
-                printf("How much would you like to deposit?\n");
-                fgets(amount, 5, stdin);
-                printf("%c\n", &amount);
-                running = 1;
                 break;
             case '2':
                 /*withdraw*/
@@ -44,7 +42,11 @@ int main()
     }
     return 0;
 }
-void deposit()
+int deposit()
 {
-    printf("This is in the function.");
+    int* amount = malloc(32); /*keeps the buffer from overflowing preventing a seg fault*/
+    printf("How much would you like to deposit?\n");
+    scanf("%d", &amount);
+    printf("Transaction Complete!\n");
+    return 0;
 }
